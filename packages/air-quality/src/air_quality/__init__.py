@@ -28,3 +28,5 @@ def main() -> None:
     else:
         print("Error:", response.status_code, response.text)
 
+    with open("air_quality_response.json", "w") as f:
+        json.dump(response.json(), f, indent=4)
